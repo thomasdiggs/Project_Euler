@@ -48,6 +48,29 @@
             }
             Console.WriteLine("Problem 3: " + n);
         }
+        public static void Problem4()
+        {
+            int largestPalindrome = 0;
+            for (int i = 999; i > 99; i--)
+            {
+                for (int j = 999; j > 90; j--)
+                {
+                    int product = i * j;
+                    string productString = product.ToString();
+                    char[] productArray = productString.ToCharArray();
+                    Array.Reverse(productArray);
+                    string reverseProductString = new string(productArray);
+                    if (productString == reverseProductString)
+                    {
+                        if (product > largestPalindrome)
+                        {
+                            largestPalindrome = product;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("Problem 4: " + largestPalindrome);
+        }
         public static void Problem6()
         {
             int sumOfSquares = 0;
@@ -70,6 +93,7 @@
             Problem1();
             Problem2();
             Problem3();
+            Problem4();
             Problem6();
         }
 
