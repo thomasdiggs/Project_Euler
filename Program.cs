@@ -71,6 +71,31 @@
             }
             Console.WriteLine("Problem 4: " + largestPalindrome);
         }
+        public static void Problem5()
+        {
+            bool found = false;
+            int i = 1;
+            while (!found)
+            {
+                bool divisible = true;
+                for (int j = 1; j <= 20; j++)
+                {
+                    if (i % j != 0 && divisible)
+                    {
+                        divisible = false;
+                        break;
+                    }
+                }
+                if (divisible)
+                {
+                    found = true;
+                } else
+                {
+                    i++;
+                }
+            }
+            Console.WriteLine("Problem 5: " + i);
+        }
         public static void Problem6()
         {
             int sumOfSquares = 0;
@@ -94,6 +119,7 @@
             Problem2();
             Problem3();
             Problem4();
+            Problem5();
             Problem6();
         }
 
