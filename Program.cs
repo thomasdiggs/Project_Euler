@@ -156,6 +156,19 @@
                 "05886116467109405077541002256983155200055935729725" +
                 "71636269561882670428252483600823257530420752963450";
             long largestProduct = 0;
+            for (int i = 0; i < thousandDigitNumber.Length - 13; i++)
+            {
+                long product = 1;
+                for (int j = 0; j < 13; j++)
+                {
+                    product *= int.Parse(thousandDigitNumber[i + j].ToString());
+                }
+                if (product > largestProduct)
+                {
+                    largestProduct = product;
+                }
+            }
+            Console.WriteLine("Problem 8: " + largestProduct);
         }
 
         static void Main(string[] args)
