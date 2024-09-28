@@ -1,3 +1,3 @@
 # Project Euler
 
-A Collection of my solutions written in C# to problems from ProjectEuler.com.
+A collection of solutions for problems on ProjectEuler.com written in C#.
